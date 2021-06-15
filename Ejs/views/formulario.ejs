@@ -1,0 +1,29 @@
+<%- include('./encabezado')-%>
+
+    <body>
+        <div class="container mt-3">
+            <div class="jumbotron">
+                <h1 style="color:blue;">Ingrese datos</h1>
+                <br>
+
+                <form action="/api/productos/guardar" method="POST">
+
+                    <div class="form-group">
+                        <label for="nombre"><b>Titulo</b></label>
+                        <input id="title" class="form-control" type="text" name="title">
+                        <label for="nombre"><b>Price</b></label>
+                        <input id="price" class="form-control" type="text" name="price">
+                        <label for="nombre"><b>Thumbnail</b></label>
+                        <input id="thumbnail" class="form-control" type="text" name="thumbnail">
+                    </div>
+                    <button class="btn btn-success mt-3 mb-5">Enviar</button>
+                </form>
+
+                <h2 style="color:crimson;">Historial</h2>
+                <%- include('./tabla')-%>
+
+            </div>
+        </div>
+    </body>
+
+    </html>
